@@ -1,0 +1,32 @@
+<html>
+ <head>
+  <title>JavaScript String split() Method</title> 
+  </head> 
+  <body> 
+
+  	<script type="text/javascript"> function Age()
+  	 { var now = new Date(); 
+  	 tyr=(now.getFullYear());
+  	  var str = document.myform.txtBday.value;
+  	   var splitted = str.split("/");
+  	    var age = tyr - splitted[2];
+  	     if(age<0)
+  	      { 
+  	      	alert("Enter correct Date of Birth");
+
+document.myform.txtBday.value=" "; document.myform.txtBday.focus(); }
+ else alert("Your age is" + age); 
+
+} </script> 
+<form name="myform">
+	<center> Name: 
+		<input type = "text"> 
+		<br/> Enter your birthday(dd/mm/yyyy)  
+		<input type="text" name="txtBday" size="12">
+		<br/> 
+		<input type="submit" value="submit" onClick="Age()">
+		<input type="reset" value="reset">
+	</center> 
+</form> 
+</body> 
+</html> 
